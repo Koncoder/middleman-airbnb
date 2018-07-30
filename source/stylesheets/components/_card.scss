@@ -49,3 +49,12 @@
 .card-link:hover {
   opacity: 0.1;
 }
+
+.rotating-icon {
+  animation: spin 3s linear infinite;
+}
+
+@keyframes spin {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+}
