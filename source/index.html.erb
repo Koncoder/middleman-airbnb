@@ -2,6 +2,49 @@
 title: Le Wagon - Middleman
 ---
 
+<div class="banner" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.2) 100%), url('images/large_cave.jpeg');">
+  <div class="banner-content">
+    <h1>Le Wagon Cave</h1>
+     <p>Join the world's most intense bootcamp. Only the toughest coders survive.</p>
+     <form action="#" class="form-inline">
+       <input type="text" class="form-control input-lg" placeholder="First name">
+       <input type="text" class="form-control input-lg" placeholder="Last name">
+       <select name="" id="" class="form-control input-lg">
+         <option value="1">Yes, I'm willing to risk my life</option>
+         <option value="2">No, thank you! 😱😱😱</option>
+       </select>
+       <input type="submit" class="btn btn-primary btn-lg" value="Commit">
+     </form>
+  </div>
+</div>
+
+<div class="container" id="home-flats">
+  <h2 class="text-center">Recent flats</h2>
+  <div class="row">
+    <% data.flats.each do |owner, flat| %>
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <div
+          class="card"
+          style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.5) 0%, rgba(0,0,0,0) 100%), url('images/<%= flat.city_slug%>.jpeg')"
+          alt=""
+        >
+          <div class="card-category"><%= flat.city_name %></div>
+          <div class="card-description">
+            <h3><%= flat.name %></h3>
+            <p><%= flat.description %></p>
+          </div>
+          <%= image_tag "https://kitt.lewagon.com/placeholder/users/#{owner}", class:"card-user" %>
+          <%= link_to "", "flats/#{owner}.html", class: "card-link" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<img src="" alt="">
+
+
+<!--
 <div class="container">
   <div class="row">
     <% 9.times do%>
@@ -10,12 +53,7 @@ title: Le Wagon - Middleman
       </div>
     <% end %>
   </div>
-</div>
-
-
-
-
-
+</div> -->
 
 
 
