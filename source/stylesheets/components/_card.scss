@@ -50,8 +50,13 @@
   opacity: 0.1;
 }
 
+.card:hover {
+  animation: spin 1s linear infinite;
+  color: red;
+}
+
 .rotating-icon {
-  animation: spin 3s linear infinite;
+  animation: spin 6s linear infinite;
 }
 
 @keyframes spin {
